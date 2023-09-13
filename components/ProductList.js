@@ -7,7 +7,9 @@ export default function ProductList() {
     <FlatList
       data={products}
       keyExtractor={(product) => product.id}
-      renderItem={({ title }) => <Text className="text-black">{title}</Text>}
+      renderItem={({ item }) => (
+        <Text className="text-black">{item.title}</Text>
+      )}
     />
   );
 }
