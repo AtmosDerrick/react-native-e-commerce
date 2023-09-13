@@ -32,7 +32,12 @@ const ProductCard = ({ image, category, title, price, description }) => {
           <Text className="text-2xl font-extrabold">${price * count}</Text>
         </View>
 
-        <Text>{description}</Text>
+        <Text numberOfLines={2} className="my-2">
+          {description}
+        </Text>
+        <TouchableOpacity className="bg-black mt-4 p-3 w-3/4 rounded-full flex-row justify-center self-center">
+          <Text className="text-white">Add to Cart</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

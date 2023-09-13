@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <SafeAreaView className="flex-1 items-center justify-center mt-8 bg-gray-200">
-      <View className="flex-row w-full gap-5">
+      <View className="flex-row justify-center w-full gap-5">
         <Switch
           trackColor={{ false: "#767577", true: "#81b0ff" }}
           thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
@@ -21,8 +21,8 @@ export default function App() {
         <Text
           className={
             isEnabled
-              ? "bg-red-500 text-lg font-semibold text-white px-4"
-              : "bg-gray-600 text-lg font-semibold text-white px-4"
+              ? " text-lg font-semibold text-gray-700 px-4"
+              : " text-lg font-semibold text-gray-700 px-4"
           }>
           New Collection
         </Text>
