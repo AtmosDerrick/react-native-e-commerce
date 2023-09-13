@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Switch, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Switch, Text, View } from "react-native";
 import { useColorScheme } from "react-native";
 import React, { useState } from "react";
 import ProductList from "./components/ProductList";
@@ -9,7 +9,7 @@ export default function App() {
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   return (
-    <View className="flex-1 items-center justify-center mt-8">
+    <SafeAreaView className="flex-1 items-center justify-center mt-8 bg-gray-200">
       <View className="flex-row w-full gap-5">
         <Switch
           trackColor={{ false: "#767577", true: "#81b0ff" }}
@@ -29,6 +29,6 @@ export default function App() {
       </View>
       <ProductList />
       <StatusBar className={isEnabled ? "text-white" : "text-black"} />
-    </View>
+    </SafeAreaView>
   );
 }
