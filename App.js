@@ -2,13 +2,14 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Switch, Text, View } from "react-native";
 import { useColorScheme } from "react-native";
 import React, { useState } from "react";
+import ProductList from "./components/ProductList";
 
 export default function App() {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   return (
-    <View className="flex-1 items-center justify-center">
+    <View className="flex-1 items-center justify-center mt-8">
       <View className="flex-row w-full gap-5">
         <Switch
           trackColor={{ false: "#767577", true: "#81b0ff" }}
@@ -17,19 +18,17 @@ export default function App() {
           onValueChange={toggleSwitch}
           value={isEnabled}
         />
-        <Text className={isEnabled ? "bg-red-500" : "bg-gray-600"}>
+        <Text
+          className={
+            isEnabled
+              ? "bg-red-500 text-lg font-semibold text-white px-4"
+              : "bg-gray-600 text-lg font-semibold text-white px-4"
+          }>
           New Collection
         </Text>
       </View>
+      <ProductList />
+      <StatusBar className={isEnabled ? "text-white" : "text-black"} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
