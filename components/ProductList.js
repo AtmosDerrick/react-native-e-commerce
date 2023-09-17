@@ -1,4 +1,4 @@
-import { View, Text, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import React from "react";
 import { products } from "../product";
 import ProductCard from "./ProductCard";
