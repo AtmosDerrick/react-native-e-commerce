@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet, Switch, Text, View } from "react-native";
-import { useColorScheme } from "react-native";
+import { SafeAreaView, Switch, Text, View } from "react-native";
 import React, { useState } from "react";
 import ProductList from "./components/ProductList";
 
